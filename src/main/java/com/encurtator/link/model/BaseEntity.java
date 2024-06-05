@@ -14,12 +14,10 @@ import java.time.LocalDateTime;
 public abstract class BaseEntity {
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;
-    private boolean isActive;
 
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
         modifiedAt = LocalDateTime.now();
-        isActive = true;
     }
 }
