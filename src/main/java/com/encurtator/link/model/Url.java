@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity(name = "Url")
 @Table(name = "url")
 @Getter
@@ -20,12 +22,14 @@ public class Url extends BaseEntity{
     private String originalUrl;
     @Column(nullable = false, unique = true)
     private String shortUrl;
+    @OneToMany(mappedBy = "url", cascade = CascadeType.ALL)
+    private List<UrlStatistics> statistics;
     @Column(nullable = false)
-    private Integer accessCount;
+    private Boolean isActive;
 
     public Url(String originalUrl, String shortUrl) {
         this.originalUrl = originalUrl;
         this.shortUrl = shortUrl;
-        this.accessCount = 0;
+        this.isActive = true;
     }
 }
