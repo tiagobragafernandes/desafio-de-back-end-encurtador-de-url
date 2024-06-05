@@ -1,14 +1,16 @@
 package com.encurtator.link.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
-@Entity
+@Entity(name = "Url")
+@Table(name = "url")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Url extends BaseEntity{
 
     @Id
@@ -18,6 +20,12 @@ public class Url extends BaseEntity{
     private String originalUrl;
     @Column(nullable = false, unique = true)
     private String shortUrl;
-    private int accessCount;
+    @Column(nullable = false)
+    private Integer accessCount;
 
+    public Url(String originalUrl, String shortUrl) {
+        this.originalUrl = originalUrl;
+        this.shortUrl = shortUrl;
+        this.accessCount = 0;
+    }
 }
