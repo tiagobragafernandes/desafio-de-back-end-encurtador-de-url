@@ -1,10 +1,10 @@
-package com.encurtator.link.service;
+package com.encurtator.link.domain.service;
 
-import com.encurtator.link.dto.request.UrlRequest;
-import com.encurtator.link.dto.response.UrlResponse;
-import com.encurtator.link.exception.UrlNotFoundException;
-import com.encurtator.link.model.Url;
-import com.encurtator.link.repository.UrlRepository;
+import com.encurtator.link.application.request.UrlRequest;
+import com.encurtator.link.application.response.UrlResponse;
+import com.encurtator.link.domain.repository.UrlRepository;
+import com.encurtator.link.domain.exception.UrlNotFoundException;
+import com.encurtator.link.domain.model.Url;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

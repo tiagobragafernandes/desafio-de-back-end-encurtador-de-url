@@ -1,4 +1,4 @@
-package com.encurtator.link.configuration;
+package com.encurtator.link.infrastructure.configuration;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;

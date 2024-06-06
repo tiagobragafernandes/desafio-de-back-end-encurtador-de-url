@@ -1,4 +1,4 @@
-package com.encurtator.link.exception;
+package com.encurtator.link.domain.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

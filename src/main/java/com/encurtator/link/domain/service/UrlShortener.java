@@ -1,4 +1,4 @@
-package com.encurtator.link.service;
+package com.encurtator.link.domain.service;
 
 import org.springframework.stereotype.Component;
 

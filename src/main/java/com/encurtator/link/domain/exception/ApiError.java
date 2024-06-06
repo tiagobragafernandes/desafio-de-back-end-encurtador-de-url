@@ -1,4 +1,4 @@
-package com.encurtator.link.exception;
+package com.encurtator.link.domain.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

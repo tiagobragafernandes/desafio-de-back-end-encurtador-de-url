@@ -1,4 +1,4 @@
-package com.encurtator.link.dto.request;
+package com.encurtator.link.application.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
