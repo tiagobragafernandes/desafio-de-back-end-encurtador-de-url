@@ -1,8 +1,8 @@
-package com.encurtator.link.controller;
+package com.encurtator.link.application.rest;
 
-import com.encurtator.link.dto.request.UrlRequest;
-import com.encurtator.link.dto.response.UrlResponse;
-import com.encurtator.link.service.UrlService;
+import com.encurtator.link.application.request.UrlRequest;
+import com.encurtator.link.application.response.UrlResponse;
+import com.encurtator.link.domain.service.UrlService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

@@ -1,12 +1,12 @@
-package com.encurtator.link.service;
+package com.encurtator.link.domain.service;
 
-import com.encurtator.link.dto.response.UrlAllTimeAccessResponse;
-import com.encurtator.link.dto.response.UrlAverageAccessResponse;
-import com.encurtator.link.exception.UrlNotFoundException;
-import com.encurtator.link.model.Url;
-import com.encurtator.link.model.UrlStatistics;
-import com.encurtator.link.repository.UrlRepository;
-import com.encurtator.link.repository.UrlStatisticsRepository;
+import com.encurtator.link.application.response.UrlAllTimeAccessResponse;
+import com.encurtator.link.application.response.UrlAverageAccessResponse;
+import com.encurtator.link.domain.repository.UrlRepository;
+import com.encurtator.link.domain.repository.UrlStatisticsRepository;
+import com.encurtator.link.domain.exception.UrlNotFoundException;
+import com.encurtator.link.domain.model.Url;
+import com.encurtator.link.domain.model.UrlStatistics;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

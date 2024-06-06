@@ -1,3 +1,3 @@
-package com.encurtator.link.dto.response;
+package com.encurtator.link.application.response;
 
 public record UrlAverageAccessResponse(Double averageAccesses) {}

@@ -1,6 +1,6 @@
-package com.encurtator.link.repository;
+package com.encurtator.link.domain.repository;
 
-import com.encurtator.link.model.Url;
+import com.encurtator.link.domain.model.Url;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
