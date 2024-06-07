@@ -1,44 +1,32 @@
-<h1> Desafio Backend Encurtador de URLs - TDS Company 🚀 </h1>
+# Projeto Encurtador de URLs
 
-Olá dev, seja bem-vindo(a), obrigado por seu interesse em participar do nosso processo seletivo.
+## Visão Geral
+O projeto do Encurtador de URLs visa fornecer uma solução para encurtar URLs longas, tornando-as mais fáceis de compartilhar e gerenciar. Ele oferece endpoints RESTful para encurtar URLs e redirecionar usuários para URLs originais com base nos identificadores encurtados.
 
-O intuito desse desafio é avaliar o nível do seu conhecimento técnico. O desafio consiste no desenvolvimento de uma API Rest utilizando preferencialmente as tecnologias Java/Kotlin e Spring Boot. Com relação ao banco de dados, fica a critério do candidato utilizar um de sua preferência (SQL ou NoSQL).
+## Funcionalidades Principais
+1. **Encurtamento de URLs:** Os usuários podem enviar uma URL longa para o serviço, que retornará um identificador único de URL encurtada.
+2. **Redirecionamento:** Ao acessar a URL encurtada, os usuários são redirecionados para a URL original correspondente.
+3. **Estatísticas de Acesso:** O sistema mantém estatísticas de acesso para URLs encurtadas, permitindo a análise do uso e da popularidade de cada URL.
 
-Ao término do desafio, encaminhe para o e-mail do recrutador (people@tds.company) o link do seu GitHub para avaliação. Lembre-se de deixar o repositório como público.
+## Tecnologias Utilizadas
+- **Java:** A linguagem de programação principal utilizada para desenvolver a lógica de negócios e a lógica do back-end.
+- **Spring Boot:** Um framework Java amplamente utilizado para criar aplicativos Java, facilitando a configuração e o desenvolvimento de aplicativos de microsserviços.
+- **Swagger/OpenAPI:** Utilizado para documentar e expor os endpoints da API RESTful do serviço de encurtamento de URLs.
+- **JUnit e Mockito:** Para testes unitários e de integração, garantindo a qualidade e a confiabilidade do código.
+- **Bucket4j:** Uma biblioteca Java para limitação de taxa, utilizada para controlar a quantidade de solicitações recebidas por determinado período de tempo.
 
-<h2> Descrição do desafio </h2>
+## Estrutura do Projeto
+O projeto segue uma estrutura baseada em pacotes, utilizando a arquitetura MVC (Model-View-Controller) para organizar o código fonte. Aqui está uma visão geral da estrutura do projeto:
+- **application:** Contém as classes responsáveis pela lógica de aplicação, como serviços e DTOs (Data Transfer Objects).
+- **domain:** Classes que representam o modelo de domínio do aplicativo, incluindo entidades e objetos de valor.
+- **infrastructure:** Classes de infraestrutura, como configurações, filtros e utilitários.
 
-Você recebeu uma solicitação para desenvolver uma aplicação backend para encurtar e gerenciar URLs, o objetivo é receber um link e transformá-lo em outro mais curto, mais fácil de lembrar e que também seja possível saber a quantidade de acessos. Você precisa criar uma solução backend para atender a essa demanda, promovendo as seguintes funcionalidades através de um microserviço de API Rest:
- 
-<h5> Funcionalidades: </h5> 
-
-- `Cadastrar URL`: Realizar o cadastro de uma URL, é necessário retornar a URL encurtada;
-- `Acessar URL encurtada`: Ao acessar a URL encurtada, o usuário deverá ser redirecionado para a URL cadastrada;
-- `Visualizando estatísticas`: Exibir estatisticas de acesso(s) da url(s) encurtada(s) (média de acessos por dia e total geral)
-
-<h5> Observações: </h5> 
-
-- Testes também devem ser implementados;
-- A segurança não precisa ser implementada, considerar qualquer acesso como autorizado;
-- As informações cadastradas via API não devem ser perdidas com o restart da aplicação.
-
-<h5> Tarefas bônus (consideradas como um diferencial): </h5>
-
-- Configuração e implementação do Swagger para documentação da API;
-- Versionamento da API.
-
-<h2> Avaliação </h2>
-
-- Qualidade, organização e simplicidade do código;
-- Conhecimento e implementação dos padrões e boas práticas (SOLID, Design patterns, etc.);
-- Arquitetura;
-- Tratamento de erros e exceções;
-- Mensagens e organização dos commits e branchs.
-
-<h2> Considerações finais </h2>
-
-- Aplicação será executada pelo avaliador, escreva instruções de como executá-la.
-
+## Rodando o Projeto
+Antes de rodar o projeto, certifique-se de ter o Docker instalado na sua máquina. Para executar o projeto, siga estas etapas:
+1. No terminal, navegue até o diretório raiz do projeto.
+2. Execute o comando `docker-compose up`.
+3. Aguarde até que o Docker inicie os contêineres necessários.
+4. Uma vez que os contêineres estejam em execução, execute o projeto via IDE.
 
 
 
