@@ -1,11 +1,22 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/urlshortener
-    username: {$USER_DATABASE}
-    password: {$PASSWORD_DATABASE}
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: application #credenciais disponiveis apenas para efeitos de teste
+    password: 123456 #credenciais disponiveis apenas para efeitos de teste
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
+  main:
+    allow-bean-definition-overriding: true
+
+api:
+  domain-base: http://localhost:8080
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
