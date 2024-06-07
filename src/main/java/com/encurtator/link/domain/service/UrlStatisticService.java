@@ -44,13 +44,13 @@ public class UrlStatisticService {
         urlStatisticsRepository.save(statistics);
     }
 
-    private long calculateAllTimeStatistics(List<UrlStatistics> statisticsList) {
+    private Long calculateAllTimeStatistics(List<UrlStatistics> statisticsList) {
         return statisticsList.stream()
                 .mapToLong(UrlStatistics::getAccessCount)
                 .sum();
     }
 
-    private double calculateAverageDailyStatistics(List<UrlStatistics> statisticsList, Integer numberOfDays) {
+    private Double calculateAverageDailyStatistics(List<UrlStatistics> statisticsList, Integer numberOfDays) {
         LocalDateTime currentDateTime = LocalDateTime.now();
         LocalDateTime startDateTime = currentDateTime.minusDays(numberOfDays);
 
@@ -58,13 +58,13 @@ public class UrlStatisticService {
                 .filter(statistics -> statistics.getAccessDate().isAfter(startDateTime))
                 .toList();
 
-        var totalDays = startDateTime.toLocalDate().datesUntil(currentDateTime.toLocalDate()).count();
-        var totalAccesses = filteredStatistics.stream()
+        Long totalDays = startDateTime.toLocalDate().datesUntil(currentDateTime.toLocalDate()).count();
+        Integer totalAccesses = filteredStatistics.stream()
                 .mapToInt(UrlStatistics::getAccessCount)
                 .sum();
 
-        var averageAccesses = totalAccesses / totalDays;
+        double averageAccesses = (double) totalAccesses / totalDays;
 
-        return averageAccesses;
+        return Math.round(averageAccesses * 10) / 10.0;
     }
 }
