@@ -27,6 +27,7 @@ Antes de rodar o projeto, certifique-se de ter o Docker instalado na sua máquin
 2. Execute o comando `docker-compose up`.
 3. Aguarde até que o Docker inicie os contêineres necessários.
 4. Uma vez que os contêineres estejam em execução, execute o projeto via IDE.
+5. Uma collection do postman está na pasta raíz do projeto, use-a para consumir os endpoints.
 
 
 
