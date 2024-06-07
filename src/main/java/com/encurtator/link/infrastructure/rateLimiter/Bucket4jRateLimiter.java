@@ -21,7 +21,7 @@ public class Bucket4jRateLimiter implements RateLimiter {
     }
 
     private Bucket createNewBucket(String key) {
-        Bandwidth limit = Bandwidth.classic(3, Refill.greedy(3, Duration.ofMinutes(1)));
+        Bandwidth limit = Bandwidth.classic(2, Refill.greedy(2, Duration.ofMinutes(1)));
         return Bucket.builder().addLimit(limit).build();
     }
 }
